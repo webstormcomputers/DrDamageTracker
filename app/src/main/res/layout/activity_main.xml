@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.drdamagetracker.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:text="Player Hp"
+        android:textColor="#616161"
+        android:textSize="14sp"
+       />
+        <TextView
+            android:id="@+id/player_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_horizontal"
+            android:paddingBottom="24dp"
+            android:paddingTop="16dp"
+            android:text="0"
+            android:textColor="#000"
+            android:textSize="56sp" />
+
+        <Button
+            android:id="@+id/big_swing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="playerBigSwing"
+            android:text="Big Swing -3" />
+
+        <Button
+            android:id="@+id/medium_swing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="playerMedSwing"
+            android:text="Medium Swing -2" />
+
+        <Button
+            android:id="@+id/jab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="playerJab"
+            android:text="Jab -1" />
+
+    </LinearLayout> // end Vertical Linear Layout column A
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:text="Orc Hp"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                />
+            <TextView
+                android:id="@+id/Orc_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:paddingBottom="24dp"
+                android:paddingTop="16dp"
+                android:text="0"
+                android:textColor="#000"
+                android:textSize="56sp" />
+            <Button
+                android:id="@+id/orc_big_swing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:onClick="orcBigSwing"
+                android:text="Big Swing -3" />
+
+            <Button
+                android:id="@+id/orc_medium_swing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:onClick="orcMedSwing"
+                android:text="Medium Swing -2" />
+
+            <Button
+                android:id="@+id/orc_jab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:onClick="orcJab"
+                android:text="Jab -1" />
+
+        </LinearLayout>//End Vertical Linear Layout Column B
+
+    </LinearLayout> //End Horizontal Linear Layout
+</RelativeLayout>
