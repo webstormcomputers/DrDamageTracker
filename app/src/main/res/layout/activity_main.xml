@@ -43,7 +43,6 @@
                 android:id="@+id/player_dead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:text=""
                 android:textColor="#616161"
                 android:textSize="14sp" />
@@ -115,7 +114,6 @@
                 android:id="@+id/orc_dead"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:text=""
                 android:textColor="#616161"
                 android:textSize="14sp" />
