@@ -12,6 +12,11 @@ int orcHp = 35;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView orcHpInit = (TextView) findViewById(R.id.Orc_hp);
+        orcHpInit.setText(String.valueOf(orcHp));
+        TextView plyrHpInit = (TextView) findViewById(R.id.player_hp);
+        plyrHpInit.setText(String.valueOf(playerHp));
     }
     /**
      * Displays the given score for the player
@@ -19,6 +24,10 @@ int orcHp = 35;
     public void displayForPlayer(int hp) {
         TextView hpView = (TextView) findViewById(R.id.player_hp);
         hpView.setText(String.valueOf(hp));
+        if (hp <= 0) {
+        TextView playerdeath = (TextView) findViewById(R.id.player_dead);
+        playerdeath.setText("Player Dead");
+        }
     }
     /**
      * Displays the given score for the Orc.
@@ -26,6 +35,10 @@ int orcHp = 35;
     public void displayForOrc(int hp) {
         TextView hpView = (TextView) findViewById(R.id.Orc_hp);
         hpView.setText(String.valueOf(hp));
+        if (hp <= 0) {
+            TextView orcdeath = (TextView) findViewById(R.id.orc_dead);
+            orcdeath.setText("Orc Dead");
+        }
     }
     public void playerBigSwing(View view)
     {
@@ -53,10 +66,19 @@ int orcHp = 35;
         playerHp = playerHp - 1;
         displayForPlayer(playerHp);
     }
+    public void potion(View view)
+    {
+        playerHp = playerHp + 5;
+        displayForPlayer(playerHp);
+    }
     public void Reset(View view){
         orcHp = 35;
         playerHp = 35;
         displayForOrc(orcHp);
         displayForPlayer(playerHp);
+        TextView playerdeath = (TextView) findViewById(R.id.player_dead);
+        playerdeath.setText("");
+        TextView orcdeath = (TextView) findViewById(R.id.orc_dead);
+        orcdeath.setText("");
     }
 }

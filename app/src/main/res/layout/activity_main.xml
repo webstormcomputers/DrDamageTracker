@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal">// Main linear layout holding the two columns
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:paddingLeft="24dp"
-            android:paddingRight="24dp">
+            android:paddingRight="24dp"> //First or Left most Column
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,10 +35,18 @@
                 android:gravity="center_horizontal"
                 android:paddingBottom="24dp"
                 android:paddingTop="16dp"
-                android:text="35"
+                android:text=""
                 android:textColor="#000"
-                android:textSize="56sp" />
-
+                android:textSize="56sp"
+                />
+            <TextView
+                android:id="@+id/player_dead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#616161"
+                android:textSize="14sp" />
             <Button
                 android:id="@+id/big_swing"
                 android:layout_width="match_parent"
@@ -62,6 +70,14 @@
                 android:layout_margin="4dp"
                 android:onClick="playerJab"
                 android:text="Jab -1" />
+            <Button
+                android:id="@+id/potion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:onClick="potion"
+                android:text="Potion"
+                />
 
         </LinearLayout>
         // end Vertical Linear Layout column A
@@ -95,6 +111,14 @@
                 android:textColor="#000"
                 android:textSize="56sp" />
 
+            <TextView
+                android:id="@+id/orc_dead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#616161"
+                android:textSize="14sp" />
             <Button
                 android:id="@+id/orc_big_swing"
                 android:layout_width="match_parent"
