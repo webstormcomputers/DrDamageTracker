@@ -22,22 +22,42 @@ int orcHp = 35;
      * Displays the given score for the player
      */
     public void displayForPlayer(int hp) {
-        TextView hpView = (TextView) findViewById(R.id.player_hp);
-        hpView.setText(String.valueOf(hp));
+        if (hp > 0) {
+            TextView hpView = (TextView) findViewById(R.id.player_hp);
+            hpView.setText(String.valueOf(hp));
+            if (hp <= 0) {
+                TextView playerdeath = (TextView) findViewById(R.id.player_dead);
+                playerdeath.setText("Player Dead");
+                hpView.setText("0");
+            }
+        }
         if (hp <= 0) {
-        TextView playerdeath = (TextView) findViewById(R.id.player_dead);
-        playerdeath.setText("Player Dead");
+            TextView hpView = (TextView) findViewById(R.id.player_hp);
+            TextView playerdeath = (TextView) findViewById(R.id.player_dead);
+            playerdeath.setText("Player Dead");
+            hpView.setText("0");
+            playerHp = 0;
         }
     }
     /**
      * Displays the given score for the Orc.
      */
     public void displayForOrc(int hp) {
+        if (hp > 0) {
         TextView hpView = (TextView) findViewById(R.id.Orc_hp);
         hpView.setText(String.valueOf(hp));
+            if (hp <= 0) {
+                TextView orcdeath = (TextView) findViewById(R.id.orc_dead);
+                orcdeath.setText("Orc Dead");
+            }
+        }
+
         if (hp <= 0) {
+            TextView hpView = (TextView) findViewById(R.id.Orc_hp);
             TextView orcdeath = (TextView) findViewById(R.id.orc_dead);
             orcdeath.setText("Orc Dead");
+            hpView.setText("0");
+            orcHp = 0;
         }
     }
     public void playerBigSwing(View view)
